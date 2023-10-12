@@ -20,6 +20,8 @@ body::before {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  /* A z-index value of -1 places the element behind all other elements on the page.
+This can be useful for creating layered effects or placing a background image behind other content. */
   z-index: -1;
 }
 
@@ -35,7 +37,9 @@ body::before {
   opacity: 0;
   height: 100vh;
   width: 100vw;
+  /*the background-position will position the image in the center horixontally and vertically  */
   background-position: center center;
+  /* This will resize the background image to cover the entire container, while maintaining its aspect ratio.  */
   background-size: cover;
   position: absolute;
   top: -15vh;
@@ -55,6 +59,7 @@ body::before {
   padding: 20px;
   font-size: 30px;
   border: 2px solid orange;
+  /* Working together the top and transform will place the arrows in the center of the page. */
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
